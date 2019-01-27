@@ -1,0 +1,36 @@
+<ion-content text-center="center">
+
+  <ion-slides pager="true" [options]="slideOpts">
+
+    <ion-slide class="step-one">
+      <ion-img [src]="'/assets/icon/introImage1.png'"></ion-img>
+      <h1>Welcome to my app!</h1>
+    <ion-buttons >
+      <ion-button   shape="round" fill="outline" (click)="goNext()">next</ion-button>
+    </ion-buttons>
+    <ion-button class="skipbutton" [routerLink]="['/login']" size="small" color="warning" (click)="openedSlides()">skip</ion-button>
+    </ion-slide>
+
+    <ion-slide class="step-two">
+      <ion-img [src]="'/assets/icon/introImage2.png'"></ion-img>
+      <h1>All Warcraft heroes cards on one place </h1>
+      <ion-buttons >
+        <ion-button  shape="round" fill="outline" (click)="goNext()">next</ion-button>
+      </ion-buttons>
+      <ion-button class="skipbutton" [routerLink]="['/login']" size="small" color="warning" (click)="openedSlides()">skip</ion-button>
+    </ion-slide>
+
+    <ion-slide class="step-three">
+      <ion-img [src]="'/assets/icon/introImage3.png'"></ion-img>
+      <h1>Get started now!!!</h1>
+      <ion-button class="doneButton" [routerLink]="['/login']" color="warning" size="block" (click)="openedSlides()">Done</ion-button>
+    </ion-slide>
+
+
+
+
+
+
+  </ion-slides>
+
+</ion-content>

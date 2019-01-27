@@ -1,0 +1,40 @@
+ion-content{
+  --ion-background-color:#d9d8de;
+}
+
+
+.fingerprint{
+  margin-top:50%;
+  position: absolute;
+  left: 15%;
+  font-size: 17px;
+}
+
+.loginItems{
+  --ion-background-color: #e8e8e8;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 5px 5px 10px rgba(71, 71, 71, 0.5);
+}
+
+
+.showPasswordIcon {
+  position: absolute;
+  right: 8%;
+  top: 14%;
+
+  ion-icon {
+    font-size:30px;
+    color: #9b9b9b;
+  }
+}
+
+ion-button{
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(71, 71, 71, 0.5);
+  width: 90%;
+  left: 5%;
+  right: 5%;
+  top:80%;
+}

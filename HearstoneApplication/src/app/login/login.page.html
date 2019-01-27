@@ -1,0 +1,60 @@
+
+<ion-content padding>
+
+
+  <form [formGroup]="loginForm">
+    <div class="loginItems">
+
+      <ion-item >
+        <ion-input [formControlName]="'email'" [(ngModel)]="email" required type="email" [placeholder]="'Email'"></ion-input>
+      </ion-item>
+
+
+      <ion-item *ngIf="!showPassword">
+        <ion-input [formControlName]="'password'" [(ngModel)]="pass" required type="password" [placeholder]="'Password'"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="showPassword">
+        <ion-input [formControlName]="'password'" [(ngModel)]="pass" required type="text" [placeholder]="'Password'"></ion-input>
+      </ion-item>
+
+
+
+      <div class="showPasswordIcon">
+        <ion-icon *ngIf="!showPassword" [name]="'eye'" (click)="showPassword = !showPassword"></ion-icon>
+        <ion-icon *ngIf="showPassword" [name]="'eye-off'" (click)="showPassword = !showPassword"></ion-icon>
+      </div>
+
+
+    </div>
+
+    <div class ="loginButton">
+      <ion-button [size]="'block'" (click)="login()" [color]="'tertiary'">
+        <span *ngIf="alreadySigned">Login</span>
+        <span *ngIf="!alreadySigned">Enter Password</span>
+      </ion-button>
+    </div>
+  </form>
+
+
+  <div padding-top class="fingerprint">
+    <div text-center *ngIf="isFingerprintAvailable">
+      <img [src]="'assets/icon/fingerprint.png'" style="width: 80px;" (click)="checkFingerprint()">
+      <div>
+        <b>Tap here for fingerprint</b>
+      </div>
+    </div>
+
+    <div text-center *ngIf="!isFingerprintAvailable">
+      <img [src]="'assets/icon/nofingerprint.png'" style="width: 80px;">
+      <div>
+        <b>There is no fingerprint support</b>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</ion-content>

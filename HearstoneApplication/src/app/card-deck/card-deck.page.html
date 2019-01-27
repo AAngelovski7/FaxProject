@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>card-deck</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<app-card-list *ngFor="let cardDeck of cardDecks"
+               [items]="cardDeck.types"
+               [listName]="cardDeck.name"
+               [navigateTo]="generateUrl">
+</app-card-list>
+</ion-content>

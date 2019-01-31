@@ -23,9 +23,9 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
 
-        // this.platform.resume.subscribe(() => {
-        //     this.navCtrl.navigateRoot('/login');
-        // });
+        this.platform.resume.subscribe(() => {
+            this.navCtrl.navigateRoot('/login');
+        });
 
 
         this.platform.backButton.subscribe(() => {

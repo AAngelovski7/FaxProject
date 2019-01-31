@@ -33,9 +33,6 @@ export class LoginPage implements OnInit {
   ngOnInit() {
 
       this.platform.ready().then(() => {
-
-
-
           this.storage.get('apiApp.master_password').then((data) => {
 
               this.alreadySigned=data?true:false;

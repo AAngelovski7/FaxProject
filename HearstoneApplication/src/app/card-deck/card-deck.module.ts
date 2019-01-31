@@ -6,8 +6,11 @@ import { IonicModule } from '@ionic/angular';
 import { CardDeckPage } from './card-deck.page';
 
 import {CardService} from '../card.service';
-import {HttpClientModule} from '@angular/common/http';
+// import {HttpClientModule} from '@angular/common/http';
 import {CardListComponent} from '../card-list/card-list.component';
+import {ToastService} from '../toast.service';
+import {AlertService} from '../alert.service';
+// import {SearchComponent} from '../search/search.component';
 
 const routes: Routes = [
   {
@@ -22,10 +25,11 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-      HttpClientModule
   ],
   providers: [
-    CardService
+    CardService,
+      ToastService,
+      AlertService
   ],
   declarations: [CardDeckPage,CardListComponent]
 })

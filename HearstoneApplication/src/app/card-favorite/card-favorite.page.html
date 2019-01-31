@@ -1,0 +1,50 @@
+<!--<ion-header>-->
+  <!--<ion-toolbar>-->
+    <!--<ion-title>card-favorite</ion-title>-->
+
+    <!--<ion-buttons slot ="start">-->
+      <!--<ion-back-button defaultHref="/"></ion-back-button>-->
+    <!--</ion-buttons>-->
+
+  <!--</ion-toolbar>-->
+<!--</ion-header>-->
+
+<!--<ion-content padding>-->
+
+  <!--<ion-list>-->
+    <!--<ion-item [routerLink]="'/tabs/card/'+card.cardId" *ngFor="let card of favoriteCardList">-->
+      <!--<ion-label>-->
+        <!--<h2>{{card?.name}}</h2>-->
+      <!--</ion-label>-->
+    <!--</ion-item>-->
+  <!--</ion-list>-->
+<!--</ion-content>-->
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>card-favorite</ion-title>
+    <ion-buttons slot ="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list >
+  <ion-item [routerLink]="'/tabs/card/'+card.cardId" *ngFor="let card of favoriteCardList">
+    <ion-list-header>
+      <ion-label class="listName">
+        <b> {{card?.name}} </b>
+      </ion-label>
+    </ion-list-header>
+    <ion-avatar slot="start">
+      <img [src]="card.img" (error)="updateImages($event)">
+    </ion-avatar>
+    <ion-label class="itemName">
+      <h2>{{card?.type}}</h2>
+    </ion-label>
+  </ion-item>
+</ion-list>
+
+</ion-content>

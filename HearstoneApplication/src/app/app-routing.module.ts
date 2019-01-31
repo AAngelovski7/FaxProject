@@ -10,7 +10,9 @@ const routes: Routes = [
   { path: 'intro', loadChildren: './intro/intro.module#IntroPageModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'card-deck', loadChildren: './card-deck/card-deck.module#CardDeckPageModule' },
-  { path: 'card-listing', loadChildren: './card-listing/card-listing.module#CardListingPageModule' }
+  { path: 'card-listing', loadChildren: './card-listing/card-listing.module#CardListingPageModule' },
+  { path: 'card-detail', loadChildren: './card-detail/card-detail.module#CardDetailPageModule' },
+  { path: 'card-favorite', loadChildren: './card-favorite/card-favorite.module#CardFavoritePageModule' }
 ];
 @NgModule({
   imports: [

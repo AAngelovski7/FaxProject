@@ -1,0 +1,25 @@
+.deck{
+    padding: 5px;
+    margin:10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(61, 71, 91, 0.7);
+  background:linear-gradient(to right,#f4700a,  #ffb000  );
+}
+
+.listName{
+  font-size: 30px;
+  font-family:"Comic Sans MS";
+  border-bottom: 2px solid #f4700a;
+  margin-bottom: 3px;
+}
+
+.cardList{
+  --ion-background-color:#f6f5f1;
+ // background:linear-gradient(to right,#b47b22,  #804936  );
+  border: 3px solid #ffb000;
+  font-family: "Comic Sans MS";
+}
+.itemName{
+  font-family: "Comic Sans MS";
+  font-size:20px;
+}

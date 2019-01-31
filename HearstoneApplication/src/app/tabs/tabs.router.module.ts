@@ -26,11 +26,11 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab3',
+        path: 'favorite',
         children: [
           {
             path: '',
-            loadChildren: '../tab3/tab3.module#Tab3PageModule'
+            loadChildren: '../card-favorite/card-favorite.module#CardFavoritePageModule'
           }
         ]
       },
@@ -43,6 +43,17 @@ const routes: Routes = [
                 }
             ]
         },
+
+        {
+            path: 'card/:cardId',
+            children: [
+                {
+                    path: '',
+                    loadChildren: '../card-detail/card-detail.module#CardDetailPageModule'
+                }
+            ]
+        },
+
       {
         path: '',
         redirectTo: '/tabs/card',

@@ -8,16 +8,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 
+import {HttpClientModule} from '@angular/common/http';
+
 import {FormsModule} from '@angular/forms';
 import { IonicStorageModule } from '@ionic/storage';
 import {AndroidFingerprintAuth} from '@ionic-native/android-fingerprint-auth/ngx';
+// import { SearchComponent } from './search/search.component';
 // import { CardListComponent } from './card-list/card-list.component';
 
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,IonicStorageModule.forRoot(),FormsModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,IonicStorageModule.forRoot(),FormsModule,HttpClientModule],
   providers: [
     StatusBar,
     SplashScreen,

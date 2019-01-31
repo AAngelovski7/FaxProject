@@ -5,14 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CardListingPage } from './card-listing.page';
-import {SearchComponent} from '../search/search.component';
+import { CardFavoritePage } from './card-favorite.page';
 import {FavoriteCardStore} from '../card-favorite.store';
 
 const routes: Routes = [
   {
     path: '',
-    component: CardListingPage
+    component: CardFavoritePage
   }
 ];
 
@@ -23,9 +22,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [CardListingPage,SearchComponent],
-    providers:[
-      FavoriteCardStore
-    ]
+  declarations: [CardFavoritePage],
+    providers: [ FavoriteCardStore]
 })
-export class CardListingPageModule {}
+export class CardFavoritePageModule {}

@@ -1,20 +1,25 @@
 
-<ion-content padding>
+<ion-content >
 
+  <h1 text-center  *ngIf="!alreadySigned">Please Register </h1>
+  <h1  text-center *ngIf="alreadySigned"> Please Login</h1>
 
   <form [formGroup]="loginForm">
     <div class="loginItems">
 
       <ion-item >
+        <ion-icon [name]="'contact'"></ion-icon>
         <ion-input [formControlName]="'email'" [(ngModel)]="email" required type="email" [placeholder]="'Email'"></ion-input>
       </ion-item>
 
 
       <ion-item *ngIf="!showPassword">
+        <ion-icon [name]="'key'"></ion-icon>
         <ion-input [formControlName]="'password'" [(ngModel)]="pass" required type="password" [placeholder]="'Password'"></ion-input>
       </ion-item>
 
       <ion-item *ngIf="showPassword">
+        <ion-icon [name]="'key'"></ion-icon>
         <ion-input [formControlName]="'password'" [(ngModel)]="pass" required type="text" [placeholder]="'Password'"></ion-input>
       </ion-item>
 
@@ -44,7 +49,6 @@
         <b>Tap here for fingerprint</b>
       </div>
     </div>
-
     <div text-center *ngIf="!isFingerprintAvailable">
       <img [src]="'assets/icon/nofingerprint.png'" style="width: 80px;">
       <div>
@@ -52,9 +56,4 @@
       </div>
     </div>
   </div>
-
-
-
-
-
 </ion-content>

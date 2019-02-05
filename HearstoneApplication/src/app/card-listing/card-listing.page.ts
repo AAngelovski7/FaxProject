@@ -24,7 +24,7 @@ export class CardListingPage implements OnInit {
     isLoading:boolean=false; //for spiner
     favoriteCards:any={};
     favoriteCardSub:Subscription;
-
+    limit:number=20;
 
   constructor(private route:ActivatedRoute,
               private cardService:CardService,
@@ -62,9 +62,6 @@ export class CardListingPage implements OnInit {
 
 
   ngOnInit() {}
-
-
-
 
     private async presentLoading(){
         const loader = await this.loadingController.create({
@@ -131,6 +128,15 @@ export class CardListingPage implements OnInit {
     favoriteCard(card:Card) {
       this.favoriteCardStore.toggleCard(card);
     }
+
+    //functipn for infinity scroll to load 20 cards than 20 ...
+    loadData(event){
+      setTimeout(()=>{
+          this.limit += 20;
+          event.target.complete();
+      },300);
+    }
+
 
 
 }

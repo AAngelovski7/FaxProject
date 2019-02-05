@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { CardFavoritePage } from './card-favorite.page';
-import {FavoriteCardStore} from '../card-favorite.store';
+// import {FavoriteCardStore} from '../card-favorite.store';
 
 const routes: Routes = [
   {
@@ -22,7 +22,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [CardFavoritePage],
-    providers: [ FavoriteCardStore]
+  declarations: [CardFavoritePage]
+    // providers: [ FavoriteCardStore]
 })
 export class CardFavoritePageModule {}

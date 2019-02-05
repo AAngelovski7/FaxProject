@@ -15,7 +15,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import {AndroidFingerprintAuth} from '@ionic-native/android-fingerprint-auth/ngx';
 // import { SearchComponent } from './search/search.component';
 // import { CardListComponent } from './card-list/card-list.component';
-
+import {FavoriteCardStore} from './card-favorite.store';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +23,7 @@ import {AndroidFingerprintAuth} from '@ionic-native/android-fingerprint-auth/ngx
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,IonicStorageModule.forRoot(),FormsModule,HttpClientModule],
   providers: [
     StatusBar,
+      FavoriteCardStore,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
       AndroidFingerprintAuth

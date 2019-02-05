@@ -34,19 +34,21 @@ loader:any;
         return loader;
     }
 
-   async ionViewWillEnter() {
-      const cardId = this.route.snapshot.paramMap.get('cardId');  // get cardId from route
-        this.loader=await this.presentLoading();
-            this.cardService.getCardById(cardId).subscribe((card:Card[])=>{
-                this.card=card.map((card:Card)=>{
-                    card.text=this.cardService.replaceCardTextLine(card.text); // replaceCardTextLine replace /n with space this is function from cardService
-                    return card; //vrakat card array of one card [id,type,text,img,faction....]
-                })[0];
-                this.loader.dismiss();
-            })
-
+  ionViewWillEnter() {
+    this.getCard();
 }
 
+async getCard(){
+    const cardId = this.route.snapshot.paramMap.get('cardId');  // get cardId from route
+    this.loader=await this.presentLoading();
+    this.cardService.getCardById(cardId).subscribe((card:Card[])=>{
+        this.card=card.map((card:Card)=>{
+            card.text=this.cardService.replaceCardTextLine(card.text); // replaceCardTextLine replace /n with space this is function from cardService
+            return card; //vrakat card array of one card [id,type,text,img,faction....]
+        })[0];
+        this.loader.dismiss();
+    })
+}
     updateImage(){
       this.card.imgGold = '/assets/image/DefaultCard.png'
     }

@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { CardListingPage } from './card-listing.page';
 import {SearchComponent} from '../search/search.component';
-import {FavoriteCardStore} from '../card-favorite.store';
+// import {FavoriteCardStore} from '../card-favorite.store';
 
 const routes: Routes = [
   {
@@ -23,9 +23,9 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [CardListingPage,SearchComponent],
-    providers:[
-      FavoriteCardStore
-    ]
+  declarations: [CardListingPage,SearchComponent]
+    // providers:[
+    //   FavoriteCardStore
+    // ]
 })
 export class CardListingPageModule {}
